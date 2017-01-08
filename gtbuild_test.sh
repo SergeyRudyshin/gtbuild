@@ -28,6 +28,9 @@ cd $TMP_DIR
 
 git init
 
+git config user.email "gtbuild_test@example.com"
+git config user.name "Gtbuild Tester"
+
 cat <<EOF > build.gts
 #                     PATCH              FULL
 #   FILTER        FILES    EXT      FILES    EXT

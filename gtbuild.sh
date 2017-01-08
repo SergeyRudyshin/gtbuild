@@ -110,7 +110,8 @@ cat <<EOF > $TMP_DIR/resolve_depends.awk
         }
     } 
     BEGIN {
-        $(grep -R "$PAR_DEPENDS_REGEXP" | sed -e "s|:${PAR_DEPENDS_REGEXP}| |" -e 's|"||' \
+        $(find -type f | xargs grep "$PAR_DEPENDS_REGEXP" \
+            | sed -e "s|:${PAR_DEPENDS_REGEXP}| |" -e 's|"||' -e 's|^\./||' \
             | awk '{print "parnt [\"" $1 "\"] = \"" $2 "\";" }')
     }
     {print get_parent(\$1, 0)}
