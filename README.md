@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SergeyRudyshin/gtbuild.svg?branch=master)](https://travis-ci.org/SergeyRudyshin/gtbuild)
+
 # GTbuild 
 _Doing More with Less_
 
